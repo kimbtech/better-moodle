@@ -1,6 +1,8 @@
 /*
 
+# based on https://stackoverflow.com/a/30319853
 function readyReady(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
+
 readyReady(function(){
 	var baseScript = document.createElement('script');
 	baseScript.src = "https://kimbtech.github.io/better-moodle/plain-loading.js";
