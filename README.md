@@ -1,4 +1,23 @@
 # Better-Moodle
+## With adaptions to use in iOS
+
+1. Install App for JS injection, e.g., [Makeover](https://apps.apple.com/de/app/makeover-custom-css/id1602361167?l=en-GB)
+2. Enable *Makeover* in settings as Safari extension
+3. Open Moodle in Safari
+4. Activate *Makeover* in the url bar (puzzle piece -> *Makeover*)
+5. Select JS and insert the following code:
+    ```js
+    function readyReady(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
+    readyReady(function(){
+        var baseScript = document.createElement('script');
+        baseScript.src = "https://kimbtech.github.io/better-moodle/plain-loading.js";
+        document.body.appendChild(baseScript);
+    });
+    ```
+6. Better Moodle is active!
+
+-----
+----
 
 [![Aktuelle Version / Current Version](https://img.shields.io/github/v/release/jxn-30/better-moodle?label=Aktuellste%20Version%20/%20Current%20Version&color=004B5A&style=for-the-badge)](https://github.com/jxn-30/better-moodle/releases/latest)
 

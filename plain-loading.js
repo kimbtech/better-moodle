@@ -1,8 +1,8 @@
 /*
 
-document.addEventListener("DOMContentLoaded", function(event) {
+function readyReady(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
+readyReady(function(){
 	var baseScript = document.createElement('script');
-	baseScript.onload = function () { load_better_moodle(); };
 	baseScript.src = "https://kimbtech.github.io/better-moodle/plain-loading.js";
 	document.body.appendChild(baseScript);
 });
