@@ -1,10 +1,10 @@
 /*
 
-var baseScript = document.createElement('script');
-baseScript.onload = function () { load_better_moodle(); };
-baseScript.src = "https://kimbtech.github.io/better-moodle/plain-loading.js";
-document.body.appendChild(baseScript);
-
+ready( () => 
+		jQuery.getScript("https://kimbtech.github.io/better-moodle/plain-loading.js", 
+		()=>load_better_moodle()
+	)
+);
 */
 
 function load_better_moodle(){
@@ -44,10 +44,10 @@ function load_better_moodle(){
 		},
 	};
 
-	var userScript = document.createElement('script');
-	userScript.src = this.GM_info.script.updateUrl.replace(
-		"https://github.com/jxn-30/better-moodle/raw/main/",
-		"https://kimbtech.github.io/better-moodle/"
-	);
-	document.body.appendChild(userScript);
+	jQuery.getScript(
+		this.GM_info.script.updateUrl.replace(
+			"https://github.com/jxn-30/better-moodle/raw/main/",
+			"https://kimbtech.github.io/better-moodle/"
+		)
+	)
 }
