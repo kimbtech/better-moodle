@@ -43,7 +43,7 @@ readyReady(function(){
 
 	this.GM_info ??= {
 		script: {
-			version: '1.21.0',
+			version: '1.21.1',
 			updateUrl: 'https://github.com/jxn-30/better-moodle/raw/main/redesign.user.js',
 		},
 	};
